@@ -30,4 +30,14 @@ def imposto_renda(salario,num_dependentes):
     else:
         faixa=0.06                
     return salario_base(salario,num_dependentes)*faixa
-print(imposto_renda(3000,2))    
+print(imposto_renda(3000,2))   
+
+#calcula o salario liquido
+def salario_liquido(salario,num_dependentes):
+    return salario-inss(salario)-imposto_renda(salario,num_dependentes)
+
+ 
+print(salario_liquido(3000,2))  
+
+print(salario_liquido(1000,2))   
+print(salario_liquido(2000,2))  
